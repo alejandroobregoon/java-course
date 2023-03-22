@@ -6,19 +6,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in);
 
-        System.out.println("Ingrese Operacion del 1 al 5");
-        System.out.println("1.- SUMA");
-        System.out.println("2.- RESTA");
-        System.out.println("3.- MULTIPLICACION");
-        System.out.println("4.- DIVISION");
-        System.out.println("5.- RESTO");
-        System.out.println("0.- SALIR");
-        System.out.println("ELIGA OPCION: ");
+        System.out.println("********************************");
+        System.out.println("* BIENVENIDOS A LA CALCULADORA *");
+        System.out.println("********************************");
+        System.out.println("* INGRESE DIGITOS DEL 1 AL 5   *");
+        System.out.println("*------------------------------*");
+        System.out.println("* 1.- SUMA                     *");
+        System.out.println("* 2.- RESTA                    *");
+        System.out.println("* 3.- MULTIPLICACION           *");
+        System.out.println("* 4.- DIVISION                 *");
+        System.out.println("* 5.- RESTO                    *");
+        System.out.println("* 0.- SALIR                    *");
+        System.out.println("********************************");
+        System.out.print("* ELIGA OPCION: ");
         Integer opcion = escaner.nextInt();
-        System.out.println("Ingrese el primer digito: ");
+        System.out.println("********************************");
+
+        System.out.println("------------------------------");
+        System.out.print("| Ingrese el primer digito: ");
         double pr = escaner.nextDouble();
-        System.out.println("Ingrese el segundo digito: ");
+        System.out.println("------------------------------");
+        System.out.println("------------------------------");
+        System.out.print("| Ingrese el segundo digito: ");
         double se = escaner.nextDouble();
+        System.out.println("------------------------------");
 
         switch (opcion) {
             case 1:
