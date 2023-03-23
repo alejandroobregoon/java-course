@@ -1,8 +1,12 @@
 package com.alejandro;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
+
+    public static final int OPCION_SUMA = 1, OPCION_RESTA = 2, OPCION_MULTIPLICACION = 3, OPCION_DIVISION = 4, OPCION_MODULACION = 5;
+
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in);
 
@@ -24,36 +28,27 @@ public class Main {
 
         System.out.println("------------------------------");
         System.out.print("| Ingrese el primer digito: ");
-        double pr = escaner.nextDouble();
+        double primerDigito = escaner.nextDouble();
         System.out.println("------------------------------");
         System.out.println("------------------------------");
         System.out.print("| Ingrese el segundo digito: ");
-        double se = escaner.nextDouble();
+        double segundoDigito = escaner.nextDouble();
         System.out.println("------------------------------");
 
-        switch (opcion) {
-            case 1:
-                double suma = pr + se;
-                System.out.println("La Suma es: " + suma);
+        double suma = primerDigito + segundoDigito, resta = primerDigito - segundoDigito, multi = primerDigito * segundoDigito, divi = primerDigito / segundoDigito, modu = primerDigito % segundoDigito;
+
+        HashMap<Integer, Double> operaciones = new HashMap<Integer, Double>();
+        operaciones.put(OPCION_SUMA, suma);
+        operaciones.put(OPCION_RESTA, resta);
+        operaciones.put(OPCION_MULTIPLICACION, multi);
+        operaciones.put(OPCION_DIVISION, divi);
+        operaciones.put(OPCION_MODULACION, modu);
+
+        for (Integer i : operaciones.keySet()) {
+            if (operaciones.containsKey(opcion)) {
+                System.out.println("El Resultado de la operacion es: " + operaciones.get(opcion));
                 break;
-            case 2:
-                double resta = pr - se;
-                System.out.println("La Resta es: " + resta);
-                break;
-            case 3:
-                double multi = pr * se;
-                System.out.println("La Multiplicación es: " + multi);
-                break;
-            case 4:
-                double divi = pr / se;
-                System.out.println("La División es: " + divi);
-                break;
-            case 5:
-                double modu = pr % se;
-                System.out.println("El Resto es: " + modu);
-                break;
-            default:
-                System.out.println("No existe tal opción");
+            }
         }
     }
 }
