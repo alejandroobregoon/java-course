@@ -25,7 +25,7 @@
 ---
 
 # Tachado
-~~MeisonMain~~
+~~Kai Haverts~~
 
 # Cursiva
 *Atonico*
@@ -47,7 +47,7 @@
 # Código
     SELECT * FROM employees;
     
-~~~java
+~~~javascript
 public class Main{
   public static void main(String [] args){
     System.out.println("Hello, World");
